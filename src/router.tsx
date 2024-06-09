@@ -1,9 +1,13 @@
 import { createBrowserRouter } from "react-router-dom";
-import App from "./App";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
 import AuthLayout from "./layouts/AuthLayout";
 import DashboardLayout from "./layouts/DashboardLayout";
+import Home from "./pages/Home";
+import NewsLetter from "./pages/NewsLetter";
+import NewsletterAdd from "./pages/NewsLetterAdd";
+import User from "./pages/User";
+import UserAdd from "./pages/UserAdd";
 
 
 const router = createBrowserRouter(
@@ -14,8 +18,25 @@ const router = createBrowserRouter(
             children: [
                 {
                     path: "/",
-                    element: <App />,
+                    element: <Home />,
                 },
+                {
+                    path: "/newsletters",
+                    element: <NewsLetter />,
+                },
+                {
+                    path: "/newsletteradd",
+                    element: <NewsletterAdd />,
+                },
+                {
+                    path: "/users",
+                    element: <User />,
+                },
+                {
+                    path: "/usersadd",
+                    element: <UserAdd />,
+                },
+
             ],
         },
         {
